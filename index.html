@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Preferencias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Preferencias</h1>
+        <form onsubmit="handleSubmit(event)">
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+            <div class="checkboxes">
+                <input type="checkbox" id="notificaciones" name="notificaciones">
+                <label for="notificaciones">Recibir Notificaciones</label>
+            </div>
+
+            <div class="radio-group">
+                <p><strong>Metodo de Contacto Preferido:</strong></p>
+                <input type="radio" id="email" name="contacto" value="Correo Electrónico" checked>
+                <label for="email">Correo Electrónico</label><br>
+                <input type="radio" id="telefono" name="contacto" value="Teléfono">
+                <label for="telefono">Teléfono</label><br>
+                <input type="radio" id="Mensaje de texto" name="contacto" value="Mensaje de texto">
+                <label for="Mensaje de texto">Mensaje de texto</label>
+            </div>
+            <div class="listbox-group">
+                <label for="opciones">Seleccione sus opciones preferidas:</label>
+                <select id="opciones" name="opciones" multiple>
+                    <option value="Opción 1">Opción 1</option>
+                    <option value="Opción 2">Opción 2</option>
+                    <option value="Opción 3">Opción 3</option>
+                    <option value="Opción 4">Opción 4</option>
+                    <option value="Opción 5">Opción 5</option>
+                </select>
+            </div>
+            <div class="datetimepicker-group">
+                <label for="fecha">Seleccione una fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <script src="scripts.js"></script>
+</body>
+</html>
